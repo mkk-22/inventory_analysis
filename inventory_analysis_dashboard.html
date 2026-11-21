@@ -4160,8 +4160,8 @@ return Plotly;
   <div class="title-row">
     <div class="title-text">
       <h1>KAVAK Inventory Analysis and Evaluation</h1>
-      <p>This dashboard presents an analysis of KAVAK's inventory through its YallaMotors listings. It shows how aligned KAVAK is with the general UAE market trends in multiple areas such as car ages, mileage distribution, and pricing. It also presents a comparison between KAVAK and its main competitors on YallaMotors, specifically Cars24. <button class="why-inline" id="whyCars24" type="button">Why Cars24?</button></p>
-      <div class="button-row">
+      <p>This dashboard presents an analysis of KAVAK's inventory through its YallaMotors listings. It shows how aligned KAVAK is with the general UAE market trends 
+        <a class="why-inline" href="https://www.mordorintelligence.com/industry-reports/united-arab-emirates-used-car-market" target="_blank" rel="noopener noreferrer">(Mordor Intelligence, 2026) </a> in multiple areas such as car ages, mileage distribution, and pricing. It also presents a comparison between KAVAK and its main competitors on YallaMotors, specifically Cars24. <button class="why-inline" id="whyCars24" type="button">Why Cars24?</button></p><div class="button-row">
         <button class="source-button" id="openSource" type="button"><span aria-hidden="true">☰</span> Data source</button>
       </div>
     </div>
@@ -4175,7 +4175,7 @@ return Plotly;
     <button class="tab" role="tab" aria-selected="false" data-page="body">Body</button>
     <button class="tab" role="tab" aria-selected="false" data-page="fuel">Fuel</button>
     <button class="tab" role="tab" aria-selected="false" data-page="competitive">Competitive Pricing</button>
-    <button class="tab" role="tab" aria-selected="false" data-page="forest">Random Forest</button>
+    <button class="tab" role="tab" aria-selected="false" data-page="forest">Random Forest Model</button>
   </nav>
 </div>
 
@@ -4190,7 +4190,6 @@ return Plotly;
     </div>
     <div class="panel"><div class="panel-top"><h3>Listings by Price Bracket</h3></div>
       <div class="table-scroll"><table class="data-table" id="table-prices"></table></div>
-      <div class="source-inline">UAE market segment markers: <a href="https://www.mordorintelligence.com/industry-reports/united-arab-emirates-used-car-market" target="_blank" rel="noopener noreferrer">Mordor Intelligence, 2025 estimates</a></div>
     </div>
   </section>
 
@@ -4201,15 +4200,13 @@ return Plotly;
       <div id="chart-makes" class="chart chart-tall" role="img" aria-label="Brand mix of each dealership as a share of its listings"></div>
     </div>
     <div class="twocol">
-      <div class="panel"><div class="panel-top"><h3>Model breadth &amp; depth</h3></div><div id="chart-breadth" class="chart" role="img" aria-label="Scatter chart of model breadth and average listings per model"></div></div>
-      <div class="panel"><div class="panel-top"><h3>Unique models per dealer</h3></div><div class="table-scroll"><table class="data-table compact" id="table-models"></table></div></div>
+      <div class="panel"><div class="panel-top"><h3>Model Breadth &amp; Depth</h3></div><div id="chart-breadth" class="chart" role="img" aria-label="Scatter chart of model breadth and average listings per model"></div></div>
+      <div class="panel"><div class="panel-top"><h3>Unique Models per Dealer</h3></div><div class="table-scroll"><table class="data-table compact" id="table-models"></table></div></div>
     </div>
-    <div class="panel"><div class="panel-top"><h3>Make–model overlap with KAVAK</h3></div><div class="venn-grid" id="venn-grid"></div>
-      <div class="source-inline">Each diagram shows unique make–models. Left: only at KAVAK. Middle: shared. Right: only at the competitor. Circle sizes and overlaps are drawn to scale. Overlap % = shared ÷ combined unique make–models.</div>
+    <div class="panel"><div class="panel-top"><h3>Make–Model Overlap with KAVAK</h3></div><div class="venn-grid" id="venn-grid"></div>
     </div>
     <div class="panel" id="platform-composition-panel">
-      <div class="panel-top"><h3>KAVAK website vs YallaMotor · Make composition</h3><span class="unit">17–18 November 2026 snapshots</span></div>
-      <p class="platform-intro">What share of KAVAK's listings is each make on its own website, compared with its listings on YallaMotor? Percentages use each platform's total listings.</p>
+      <div class="panel-top"><h3>KAVAK Website vs. YallaMotor</h3><span class="unit">18 November 2026 snapshots</span></div>
       <div class="platform-stats">
         <div class="mini-stat"><strong>776</strong><span>KAVAK website listings</span></div>
         <div class="mini-stat"><strong>552</strong><span>KAVAK listings on YallaMotor</span></div>
@@ -4223,54 +4220,50 @@ return Plotly;
   <section class="tabpage" id="page-age" role="tabpanel">
     <div class="page-head"><h2>Car Age</h2></div>
     <details class="notes-box" open><summary>Insights</summary><div class="insights" data-insights="age"></div></details>
-    <div class="panel"><div class="panel-top"><h3>Age distribution by dealer</h3></div><div id="chart-age" class="chart chart-tall" role="img" aria-label="Ridge plot of car age distribution by dealership"></div>
-      <p class="caution">Each ridge shows the share of that dealer’s listings at each car age, on the same scale for every dealer. Hover a dot to see the count.</p>
+    <div class="panel"><div class="panel-top"><h3>Age Distribution by Dealer</h3></div><div id="chart-age" class="chart chart-tall" role="img" aria-label="Ridge plot of car age distribution by dealership"></div>
     </div>
-    <div class="panel"><div class="panel-top"><h3>Median car age</h3></div><div class="table-scroll"><table class="data-table" id="table-age-median"></table></div></div>
-    <div class="panel"><div class="panel-top"><h3>Inventory by age</h3></div><div class="table-scroll"><table class="data-table" id="table-age"></table></div>
-      <div class="source-inline">Market-leading segment: 3–5 years. Fastest-growing segment: under 3 years. <a href="https://www.mordorintelligence.com/industry-reports/united-arab-emirates-used-car-market" target="_blank" rel="noopener noreferrer">Source</a>. Age = 2026 − model year; 2027 models are listed separately.</div>
+    <div class="panel"><div class="panel-top"><h3>Median Car Age</h3></div><div class="table-scroll"><table class="data-table" id="table-age-median"></table></div></div>
+    <div class="panel"><div class="panel-top"><h3>Inventory by Age</h3></div><div class="table-scroll"><table class="data-table" id="table-age"></table></div>
     </div>
   </section>
 
   <section class="tabpage" id="page-mileage" role="tabpanel">
     <div class="page-head"><h2>Mileage</h2></div>
     <details class="notes-box" open><summary>Insights</summary><div class="insights" data-insights="mileage"></div></details>
-    <div class="panel"><div class="panel-top"><h3>Mileage distribution by dealer</h3></div><div id="chart-mileage" class="chart chart-violin" role="img" aria-label="Violin plot of mileage distribution by dealership with medians"></div>
-      <p class="caution">Each violin shows how that dealer’s listings are spread across mileage; wider means more listings. The diamond marks the median and the box the middle half of listings. Hover a violin for the full numbers.</p>
+    <div class="panel"><div class="panel-top"><h3>Mileage Distribution by Dealer</h3></div><div id="chart-mileage" class="chart chart-violin" role="img" aria-label="Violin plot of mileage distribution by dealership with medians"></div>
     </div>
     <div class="twocol mileage-two">
-      <div class="panel"><div class="panel-top"><h3>Median mileage</h3></div><div class="table-scroll"><table class="data-table compact" id="table-mileage-median"></table></div></div>
-      <div class="panel"><div class="panel-top"><h3>Mileage by bracket</h3></div><div class="table-scroll"><table class="data-table compact" id="table-mileage"></table></div></div>
+      <div class="panel"><div class="panel-top"><h3>Median Mileage</h3></div><div class="table-scroll"><table class="data-table compact" id="table-mileage-median"></table></div></div>
+      <div class="panel"><div class="panel-top"><h3>Mileage by Bracket</h3></div><div class="table-scroll"><table class="data-table compact" id="table-mileage"></table></div></div>
     </div>
-    <div class="panel"><div class="panel-top"><h3>Average mileage by model-year age</h3><div class="view-switch" data-switch="mileageAge"><button data-mode="default" class="selected">By dealer order</button><button data-mode="sorted">Sorted</button></div></div><div id="chart-mileage-age" class="chart chart-primary"></div><div class="source-inline">Only ages with at least 5 listings per dealer are plotted.</div></div>
+    <div class="panel"><div class="panel-top"><h3>Average Mileage by Model-Year Age</h3><div class="view-switch" data-switch="mileageAge"><button data-mode="default" class="selected">By dealer order</button><button data-mode="sorted">Sorted</button></div></div><div id="chart-mileage-age" class="chart chart-primary"></div><div class="source-inline">Only ages with at least 5 listings per dealer are plotted.</div></div>
   </section>
 
   <section class="tabpage" id="page-body" role="tabpanel">
     <div class="page-head"><h2>Body Type</h2></div>
     <details class="notes-box" open><summary>Insights</summary><div class="insights" data-insights="body"></div></details>
-    <div class="panel"><div class="panel-top"><h3>Body style distribution by dealer</h3><div class="switch-group"><div class="view-switch" data-switch="body"><button data-mode="count" class="selected">Count</button><button data-mode="share">% of dealer stock</button></div><div class="view-switch" data-switch="bodySort"><button data-mode="default" class="selected">Default order</button><button data-mode="sorted">Sorted</button></div></div></div><div id="chart-body" class="chart chart-primary"></div></div>
+    <div class="panel"><div class="panel-top"><h3>Body Style Distribution by Dealer</h3><div class="switch-group"><div class="view-switch" data-switch="body"><button data-mode="count" class="selected">Count</button><button data-mode="share">% of dealer stock</button></div><div class="view-switch" data-switch="bodySort"><button data-mode="default" class="selected">Default order</button><button data-mode="sorted">Sorted</button></div></div></div><div id="chart-body" class="chart chart-primary"></div></div>
   </section>
 
   <section class="tabpage" id="page-fuel" role="tabpanel">
     <div class="page-head"><h2>Fuel Type</h2></div>
     <details class="notes-box" open><summary>Insights</summary><div class="insights" data-insights="fuel"></div></details>
-    <div class="panel"><div class="panel-top"><h3>Fuel type distribution by dealer</h3><div class="switch-group"><div class="view-switch" data-switch="fuel"><button data-mode="count" class="selected">All listings</button><button data-mode="share">Non-petrol only</button></div><div class="view-switch" data-switch="fuelSort"><button data-mode="default" class="selected">Default order</button><button data-mode="sorted">Sorted</button></div></div></div><div id="chart-fuel" class="chart chart-primary"></div></div>
+    <div class="panel"><div class="panel-top"><h3>Fuel Type Distribution by Dealer</h3><div class="switch-group"><div class="view-switch" data-switch="fuel"><button data-mode="count" class="selected">All listings</button><button data-mode="share">Non-petrol only</button></div><div class="view-switch" data-switch="fuelSort"><button data-mode="default" class="selected">Default order</button><button data-mode="sorted">Sorted</button></div></div></div><div id="chart-fuel" class="chart chart-primary"></div></div>
   </section>
 
   <section class="tabpage" id="page-competitive" role="tabpanel">
     <div class="page-head"><h2>Competitive Pricing</h2></div>
     <details class="notes-box" open><summary>Insights</summary><div class="insights" data-insights="competitive"></div></details>
     <div class="compact-metrics" id="match-metrics"></div>
-    <div class="panel"><div class="panel-top"><h3>Broad matched price differences</h3></div><div id="chart-broad" class="chart chart-primary"></div>
+    <div class="panel"><div class="panel-top"><h3>Broad Matched Price Differences</h3></div><div id="chart-broad" class="chart chart-primary"></div>
       <div class="source-inline">Groups match on make, model, model year, regional specs and 10,000-km mileage band. Negative values = KAVAK cheaper.</div>
     </div>
-    <div class="panel"><div class="panel-top"><h3>Strict matches · individual listing links</h3></div><div class="table-scroll"><table class="data-table strict-table" id="table-strict"></table></div>
-      <div class="source-inline">Strict matches also include extracted trim and engine displacement. Expand a row to view original listings. Links require internet and may change.</div>
+    <div class="panel"><div class="panel-top"><h3>Strict Matches · Individual Listing Links</h3></div><div class="table-scroll"><table class="data-table strict-table" id="table-strict"></table></div>
+      <div class="source-inline">Strict matches also include extracted trim and engine displacement.</div>
     </div>
   </section>
   <section class="tabpage" id="page-forest" role="tabpanel">
-    <div class="page-head"><h2>Random Forest Regressor</h2><span class="meta">Exploratory asking-price analysis</span></div>
-    <p class="rf-headline">A model trained on all five dealers' YallaMotor listings, using vehicle characteristics to predict advertised asking prices. Results below are from the held-out test set.</p>
+    <div class="page-head"><h2>Random Forest Model</h2><span class="meta"></span></div>
     <details class="notes-box" open>
       <summary>Insights</summary>
       <div class="rf-insight-content">
@@ -4291,18 +4284,18 @@ return Plotly;
     </div>
     <div class="twocol">
       <div class="panel">
-        <div class="panel-top"><h3>Feature importance</h3></div>
+        <div class="panel-top"><h3>Feature Importance</h3></div>
         <div class="chart chart-rf" id="chart-rf-importance" role="img" aria-label="Permutation importance for seven vehicle features"></div>
         <p class="caution rf-note">Increase in prediction error when a feature is shuffled. Greater values indicate stronger model reliance, not a causal price effect.</p>
       </div>
       <div class="panel">
-        <div class="panel-top"><h3>Actual vs predicted asking price</h3></div>
+        <div class="panel-top"><h3>Actual vs. Predicted Asking Price</h3></div>
         <div class="chart chart-rf" id="chart-rf-predicted" role="img" aria-label="Held-out actual asking prices versus Random Forest predicted asking prices"></div>
         <p class="caution rf-note">Each dot is one test listing. The dashed line represents a perfect prediction.</p>
       </div>
     </div>
     <div class="panel">
-      <div class="panel-top"><h3>Prediction error by asking-price range</h3><span class="unit">Mean absolute error (AED) · test set</span></div>
+      <div class="panel-top"><h3>Prediction Error by Asking-Price Range</h3><span class="unit"></span></div>
       <div class="chart chart-rf-band" id="chart-rf-bands" role="img" aria-label="Average absolute prediction error grouped by actual price range"></div>
       <p class="caution">The largest absolute errors occur above AED 200,000. This is an exploratory model of <b>advertised prices</b>, not a validated fair-market valuation tool. Exact trim and vehicle condition are not reliably captured.</p>
     </div>
@@ -4328,6 +4321,8 @@ return Plotly;
     <p>Partial inventory coverage so not an analysis of any sellers full inventory, single snapshot,
     advertised prices rather than transaction prices (negotiation is possible),
     and potentially missing vehicle attributes as not all sellers are putting the same info or fully consistently adhering to their own standards.</p>
+
+    <p><a href="https://github.com/mkk-22/inventory_analysis.git">Click here to view the GitHub repository with the Jupyter Notebooks and Datasets</a></p>
 </div>
 </aside>
 <dialog class="why-dialog" id="cars24Dialog" aria-label="Why Cars24?"><div class="side-head"><h2>Why Cars24?</h2><button id="closeWhy" aria-label="Close">×</button></div><div class="why-body">
